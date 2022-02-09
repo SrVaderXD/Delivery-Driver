@@ -5,8 +5,8 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
 
-    [SerializeField] float rotationSpeed = 0.6f;
-    [SerializeField] float moveSpeed = 0.015f;
+    [SerializeField] float rotationSpeed = 200f;
+    [SerializeField] float moveSpeed = 15f;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +16,8 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float rotationDirection = Input.GetAxis("Horizontal");
-        float moveDirection = Input.GetAxis("Vertical");
+        float rotationDirection = Input.GetAxis("Horizontal") * Time.deltaTime;
+        float moveDirection = Input.GetAxis("Vertical") * Time.deltaTime;
         transform.Rotate(0, 0, -rotationDirection * rotationSpeed);
         transform.Translate(0, moveSpeed * moveDirection, 0);
     }
