@@ -1987,6 +1987,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25e9edc747e21449b25ac1c3e898d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasPackageColor:
+    serializedVersion: 2
+    rgba: 4279289878
+  noPackageColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  destroyDelay: 0.1
 --- !u!1 &998172939
 GameObject:
   m_ObjectHideFlags: 0
